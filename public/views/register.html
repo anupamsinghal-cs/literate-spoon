@@ -1,0 +1,60 @@
+<!--======= Head ============================================================================================================================================================-->
+
+<head>
+	<title>User Registration</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7; IE=EmulateIE9">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+	<link rel="stylesheet" type="text/css" href="../css/style.css" media="all" />
+
+</head>
+
+<body>
+<br>
+<br><h1 style="text-align:center;color:white">Registration Page</h1>
+	<table>
+		<form>
+			<tr><td><input type="text" placeholder="Enter First Name" ng-model="fname"></input></td></tr>
+			<tr><td><input type="text" placeholder="Enter Last Name" ng-model="lname"></input></td></tr>
+			<tr><td><input type="text" placeholder="Enter Department" ng-model="dname"></input></td></tr>
+			<tr><td><input type="number" placeholder="Enter Mobile Number"ng-model="mobileno"></input></td></tr>
+			<tr><td><input type="submit" value="Register" ng-click="register()"></input></td></tr>
+		</form>
+	</table>
+
+	<table>
+		<form>
+			<tr><td><input type="text" placeholder="Enter First Name" ng-model="fn"></input></td></tr>
+			<tr><td><input type="submit" value="Delete" ng-click="delete()"></input></td></tr>
+		</form>
+	</table>
+
+
+	<table>
+		<form>
+			<tr><td><input type="submit" value="Show Data" ng-click="showdata()"></input></td></tr>
+		</form>
+	</table>
+
+
+	<table>
+		<tr>
+			<th>First Name</th>
+			<th>Last Name</th>
+			<th>Department Name</th>
+			<th>Mobile Number</th>
+		</tr>
+		<tr ng-repeat="i in data">
+			<td> {{i.Fname}}</td>
+			<td> {{i.Lname}}</td>
+			<td> {{i.Dname}}</td>
+			<td> {{i.MobileNumber}}</td>
+		</tr>
+	</table>
+
+</body>
+
+
+
+
+
