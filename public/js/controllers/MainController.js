@@ -14,8 +14,6 @@ $scope.register = function()
 			FNAME     		 : $scope.fname,
 			LNAME     		 : $scope.lname,
 			DNAME			 : $scope.dname,
-			PASSWORD          :$scope.password,
-			CONFIRM_PASSWORD  :$scope.confirm_password,
 			MOBILENUMBER   : $scope.mobileno
 
 		}
@@ -41,8 +39,6 @@ $scope.register = function()
 		$scope.fname ="";
 		$scope.lname = "";
 		$scope.dname = "";
-		$scope.password = "";
-		$scope.confirm_password = "";
 		$scope.mobileno="";
 
 	}

@@ -20,8 +20,15 @@
 		<input type="text" id="lastname" class="form-control" ng-model="lname" placeholder="Ex: Doe">
 	</div>
 	<div class="form-group">
-		<label for="dept">Enter Employee's Department:</label>
-		<input type="text" id="dept" class="form-control" ng-model="dname">
+		<label for="dname">Enter Employee's Department:</label>
+		<li><select name="dept" ng-model="dname">  
+		<option selected="" value="Default">(Please select a country)</option>  
+		<option value="IOT">IOT</option>  
+		<option value="Big Data">Big Data</option>  
+		<option value="MARS">MARS</option>  
+		<option value="NSM">NSM</option>  
+	</select></li> 
+		
 	</div>
 	<div class="form-group">
 		<label for="mob_no">Enter Employee's Primary Contact:</label>
