@@ -14,9 +14,6 @@ module.exports = function (app) {
           Fname         : req.body.FNAME,
           Lname         : req.body.LNAME,
           Dname         :req.body.DNAME,
-          Password      :req.body.PASSWORD,
-          Confirm_Password : req.body.CONFIRM_PASSWORD,
-
           MobileNumber  : req.body.MOBILENUMBER
 
         };

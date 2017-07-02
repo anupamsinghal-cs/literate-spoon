@@ -7,8 +7,6 @@ var UserSchema = Schema({
 	Fname           : String,
 	Lname           : String,
 	Dname			: String,
-	Password 		: String,
-	Confirm_Password: String,
 	MobileNumber    : Number
 });
 
