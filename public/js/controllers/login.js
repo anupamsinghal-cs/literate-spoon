@@ -12,7 +12,7 @@ else if ( username == "iot" && password == "iot"){
 //alert ("Login successfully");
 document.getElementById("error_message").setAttribute('style','display:none;');
 //window.location = "./views/register.html"; // Redirecting to other page.
-window.open("./register");
+window.location.assign("/register")
 return false;
 }
 else{
