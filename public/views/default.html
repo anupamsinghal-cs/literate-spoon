@@ -29,7 +29,7 @@
 		margin-left:20px;
 	}
   </style>
-
+<!--
 <style>
 ul {
     list-style-type: none;
@@ -83,7 +83,50 @@ li.dropdown {
 }
 </style>
 
+-->
 
+
+<style>
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+</style>
 
 
 </head>
@@ -133,12 +176,10 @@ li.dropdown {
 		
 	
 	</div>
+
+	<!--
 	<div class="col-sm-6">
-		
-	
-
-
-<ul>
+		<ul>
   
   <li class="dropdown">
     <a href="javascript:void(0)" class="dropbtn">Important Link</a>
@@ -150,7 +191,18 @@ li.dropdown {
   </li>
 </ul>
 
-	</div>
+	</div>-->
+
+
+	<h2 style="margin-left:40%">LOCATION LOGGER</h2>
+<div class="dropdown" style="margin-left:45%" >
+  <button class="dropbtn" size="35">Important Links</button>
+  <div class="dropdown-content">
+    <a href="/departments">Departments</a>
+    <a href="/professor">Professors</a>
+      </div>
+</div>
+
 
 </div>
 </div>
