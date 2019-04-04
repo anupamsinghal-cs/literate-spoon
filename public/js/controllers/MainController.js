@@ -1,12 +1,37 @@
 //========================================================================================================================================================================----------------------------->
-var app = angular.module('module2');
+var app = angular.module('module1');
 app.controller('MainController',['$scope','$http','IOT','$timeout','$location','$mdDialog','$route', function($scope, $http, IOT,$timeout,$location,$mdDialog,$route){
 
 
 	//**************************************** Register Data **********************************************************************************************
 	//**************************************** Register Data **********************************************************************************************
 	//**************************************** Register Data **********************************************************************************************
-$scope.register = function()
+$scope.validate = function(){
+	var username = document.getElementById("username").value;
+var password = document.getElementById("password").value;
+if (username.length == 0 && password.length == 0){
+	document.getElementById("error_message").setAttribute('style','display:block;');
+}
+else if ( username == "iot" && password == "iot"){
+alert ("Login successfully");
+document.getElementById("error_message").setAttribute('style','display:none;');
+window.location.href = "./views/register.html"; // Redirecting to other page.
+//window.location.assign("/register")
+return false;
+}
+else{
+attempt --;// Decrementing by one.
+alert("You have "+attempt+" attempts left.");
+// Disabling fields after 3 attempts.
+if( attempt == 0){
+document.getElementById("username").disabled = true;
+document.getElementById("password").disabled = true;
+document.getElementById("submit").disabled = true;
+return false;
+}
+}
+}
+	$scope.register = function()
 	{
 
 		var store = {
@@ -14,8 +39,6 @@ $scope.register = function()
 			FNAME     		 : $scope.fname,
 			LNAME     		 : $scope.lname,
 			DNAME			 : $scope.dname,
-			PASSWORD          :$scope.password,
-			CONFIRM_PASSWORD  :$scope.confirm_password,
 			MOBILENUMBER   : $scope.mobileno
 
 		}
@@ -41,8 +64,6 @@ $scope.register = function()
 		$scope.fname ="";
 		$scope.lname = "";
 		$scope.dname = "";
-		$scope.password = "";
-		$scope.confirm_password = "";
 		$scope.mobileno="";
 
 	}
