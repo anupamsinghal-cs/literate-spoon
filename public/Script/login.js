@@ -1,5 +1,3 @@
-
-
 var attempt = 3; // Variable to count number of attempts.
 // Below function Executes on click of login button.
 function validate(){
@@ -11,8 +9,8 @@ if (username.length == 0 && password.length == 0){
 else if ( username == "iot" && password == "iot"){
 //alert ("Login successfully");
 document.getElementById("error_message").setAttribute('style','display:none;');
-//window.location = "./views/register.html"; // Redirecting to other page.
-window.open("./register");
+window.location.href = "/register"; // Redirecting to other page.
+//window.open("./register");
 return false;
 }
 else{
@@ -27,4 +25,3 @@ return false;
 }
 }
 }
-
